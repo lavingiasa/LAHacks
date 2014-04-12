@@ -12,10 +12,19 @@
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
 {
   CLLocationManager *locationManager;
-
+  
 }
 
 
 @property (strong, nonatomic) IBOutlet UIButton *checkIn;
+@property (nonatomic) NSInteger classesHitToday;
+@property (nonatomic) NSInteger moneyWasted;
+@property (nonatomic) NSInteger graceDays;
+@property (nonatomic) NSInteger cancelDays;
+@property (nonatomic) NSInteger classesMissedThisSemester;
+@property (nonatomic, strong) NSMutableArray* numberOfClassesPerDay;
+
+
+
 
 @end

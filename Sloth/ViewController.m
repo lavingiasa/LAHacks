@@ -62,8 +62,8 @@
 - (IBAction)cancelClass:(id)sender
 {
   NSLog(@"You are canceling now!");
-  [[SectionModel alloc] initWithSectionName:@"Section1" andStartTime:@"12" andxLoc: 25 andyLoc:35 andEndTime:@"13"];
-  [[SectionModel alloc] initWithSectionName:@"Section2" andStartTime:@"12" andxLoc: 25 andyLoc:35 andEndTime:@"13"];
+  [[SectionModel alloc] initWithSectionName:@"Section1" andStartTime:@"12" andxLoc: 25 andyLoc:35 andEndTime:@"13" andDays: @"00001"];
+  [[SectionModel alloc] initWithSectionName:@"Section2" andStartTime:@"12" andxLoc: 25 andyLoc:35 andEndTime:@"13" andDays:@"10101"];
   NSMutableArray * sections = [SectionModel getSections];
   
   for(int i = 0; i < [sections count]; i++)

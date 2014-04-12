@@ -15,12 +15,14 @@
   @property (nonatomic,retain) NSString *sectionName;
   @property (nonatomic,retain) NSString *startTime;
   @property (nonatomic,retain) NSString *endTime;
+  @property (nonatomic) NSMutableArray* daysOfClass;
 
 -(id) initWithSectionName: (NSString *) name
              andStartTime: (NSString *) start
                   andxLoc: (double) x
                   andyLoc: (double) y
-               andEndTime: (NSString *) end;
+               andEndTime: (NSString *) end
+                  andDays: (NSString * ) days;
 +(NSMutableArray *) getSections;
 
 @end

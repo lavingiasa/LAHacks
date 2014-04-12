@@ -14,6 +14,7 @@
   @synthesize endTime;
   @synthesize xLocation;
   @synthesize yLocation;
+  @synthesize daysOfClass;
 
   static NSMutableArray* setOfSections;
 
@@ -40,6 +41,7 @@
              andxLoc: (double) x
              andyLoc: (double) y
              andEndTime: (NSString *) end
+             andDays: (NSString * ) days
 {
   self = [super init];
 
@@ -48,6 +50,14 @@
   self.endTime = end;
   self.xLocation = x;
   self.yLocation = y;
+  for (int i = 0; i < [days length]; i++) {
+    if([days characterAtIndex:i] == '1')
+    {
+      [daysOfClass replaceObjectAtIndex:i withObject:[NSNumber numberWithBool:YES]];
+    }else{
+      [daysOfClass replaceObjectAtIndex:i withObject:[NSNumber numberWithBool:NO]];
+    }
+  }
   
   if(setOfSections == nil)
   {

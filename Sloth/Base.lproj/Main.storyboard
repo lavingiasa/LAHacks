@@ -105,6 +105,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
+                                            <action selector="textFieldDidBeginEditing:" destination="6UK-f3-RKv" eventType="editingDidBegin" id="tCl-V3-Qpa"/>
+                                            <action selector="textFieldDidEndEditing:" destination="6UK-f3-RKv" eventType="editingDidEnd" id="sV7-IR-zkg"/>
                                             <action selector="textFieldExit:" destination="6UK-f3-RKv" eventType="editingDidEndOnExit" id="Tx7-bs-wxr"/>
                                         </connections>
                                     </textField>

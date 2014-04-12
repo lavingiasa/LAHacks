@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */; };
 		975150A018F940ED007C5EA4 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751509F18F940ED007C5EA4 /* SectionModel.m */; };
 		975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 975150A218F95B7A007C5EA4 /* SectionsTable.m */; };
 		97D025D718F92DA100583527 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D025D618F92DA100583527 /* Foundation.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9736EE3618F9678A00B6EDDF /* SectionInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionInformationViewController.h; sourceTree = "<group>"; };
+		9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionInformationViewController.m; sourceTree = "<group>"; };
 		9751509E18F940ED007C5EA4 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
 		9751509F18F940ED007C5EA4 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
 		975150A118F95B7A007C5EA4 /* SectionsTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsTable.h; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				9751509F18F940ED007C5EA4 /* SectionModel.m */,
 				975150A118F95B7A007C5EA4 /* SectionsTable.h */,
 				975150A218F95B7A007C5EA4 /* SectionsTable.m */,
+				9736EE3618F9678A00B6EDDF /* SectionInformationViewController.h */,
+				9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */,
 			);
 			path = Sloth;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				97D025ED18F92DA100583527 /* ViewController.m in Sources */,
 				97D025E718F92DA100583527 /* AppDelegate.m in Sources */,
 				975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */,
+				9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */,
 				97D025E318F92DA100583527 /* main.m in Sources */,
 				975150A018F940ED007C5EA4 /* SectionModel.m in Sources */,
 			);

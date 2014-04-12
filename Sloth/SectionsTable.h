@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SectionsTable : UITableViewController <UITableViewDelegate, UITableViewDataSource>
-
+  +(NSInteger) rowThatWasPicked;
 @end

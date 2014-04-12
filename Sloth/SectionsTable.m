@@ -15,6 +15,8 @@
 
 @implementation SectionsTable
 
+static NSInteger rowThatWasPicked;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -114,16 +116,26 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
+    if ([segue.identifier isEqualToString:@"ChoseSection"]) {
+      //[segue.destinationViewController setImageURL:[NSURL URLWithString:photo.imageURL]];
+      //[segue.destinationViewController setTitle:photo.title];
+    }    // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
 }
 
- */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+  
+  NSLog(@"asdfads");
+  rowThatWasPicked = indexPath.row;
+  //self.selectedCellText = [[[tableView cellForRowAtIndexPath:indexPath] textLabel] text];
+  [self performSegueWithIdentifier:@"ChoseSection" sender:self];
+  //[tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end

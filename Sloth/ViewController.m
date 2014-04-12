@@ -48,6 +48,14 @@
     NSLog(@"OldLocation %f %f", oldLocation.coordinate.latitude, oldLocation.coordinate.longitude);
     NSLog(@"NewLocation %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     [locationManager stopUpdatingLocation];
+  
+    NSDate *now = [[NSDate alloc] init];
+  
+  
+    for (int i = 0; i < [[SectionModel getSections] count]; i++)
+    {
+      
+    }
 
 }
 
@@ -62,7 +70,7 @@
 - (IBAction)cancelClass:(id)sender
 {
   NSLog(@"You are canceling now!");
-  [[SectionModel alloc] initWithSectionName:@"Section1" andStartTime:@"12" andxLoc: 25 andyLoc:35 andEndTime:@"13" andDays: @"00001"];
+  [[SectionModel alloc] initWithSectionName:@"Section1" andStartTime:@"12" andxLoc: 51.50998 andyLoc:-0.133700 andEndTime:@"13" andDays: @"00001"];
   [[SectionModel alloc] initWithSectionName:@"Section2" andStartTime:@"12" andxLoc: 25 andyLoc:35 andEndTime:@"13" andDays:@"10101"];
   NSMutableArray * sections = [SectionModel getSections];
   

@@ -70,7 +70,15 @@ static NSInteger rowThatWasPicked;
       cell = [[UITableViewCell alloc] init];
     }
   
-    cell.textLabel.text = [[[SectionModel getSections] objectAtIndex:indexPath.row] sectionName];
+    NSMutableString *labelString = [[NSMutableString alloc] init];
+    [labelString appendString:[[[SectionModel getSections] objectAtIndex:indexPath.row] sectionName]];
+    [labelString appendString: @": "];
+    [labelString appendString:[[[SectionModel getSections] objectAtIndex:indexPath.row] startTime]];
+    [labelString appendString: @" - "];
+    [labelString appendString:[[[SectionModel getSections] objectAtIndex:indexPath.row] endTime]];
+    cell.textLabel.text = labelString;
+//  cell.detailTextLabel.text = [[[SectionModel getSections] objectAtIndex:indexPath.row] startTime] ,"asdf", [[[SectionModel getSections] objectAtIndex:indexPath.row] startTime];
+
 
     // Configure the cell...
     
@@ -136,6 +144,11 @@ static NSInteger rowThatWasPicked;
   //self.selectedCellText = [[[tableView cellForRowAtIndexPath:indexPath] textLabel] text];
   [self performSegueWithIdentifier:@"ChoseSection" sender:self];
   //[tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
++ (NSInteger) rowThatWasPicked
+{
+  return rowThatWasPicked;
 }
 
 @end

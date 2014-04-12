@@ -7,12 +7,16 @@
 //
 
 #import "SectionInformationViewController.h"
+#import "SectionModel.h"
+#import "SectionsTable.h"
 
 @interface SectionInformationViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *NameLabel;
 
 @end
 
 @implementation SectionInformationViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -20,12 +24,16 @@
     if (self) {
         // Custom initialization
     }
+  
+  
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.NameLabel.text = [[[SectionModel getSections] objectAtIndex:[SectionsTable rowThatWasPicked]] sectionName];
+
 	// Do any additional setup after loading the view.
 }
 

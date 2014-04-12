@@ -17,6 +17,7 @@
 @synthesize mapView;
 static CLLocationCoordinate2D coordinateOfAnnotation;
 bool placeSelected = false;
+MKPointAnnotation *dropPin;
 
 
 //- (void)handleLongPressGesture:(UIGestureRecognizer*)sender
@@ -44,7 +45,7 @@ bool placeSelected = false;
   NSLog(@"bunt");
   if (sender.state == UIGestureRecognizerStateEnded)
   {
-    [self.mapView removeGestureRecognizer:sender];
+    //[self.mapView removeGestureRecognizer:sender];
   }
   else
   {
@@ -52,7 +53,10 @@ bool placeSelected = false;
     CGPoint point = [sender locationInView:self.mapView];
     CLLocationCoordinate2D locCoord = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
     // Then all you have to do is create the annotation and add it to the map
-    MKPointAnnotation *dropPin = [[MKPointAnnotation alloc] init];
+    if(dropPin == NULL)
+    {
+      dropPin = [[MKPointAnnotation alloc] init];
+    }
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(locCoord.latitude, locCoord.longitude);
     dropPin.coordinate = coord;
     placeSelected = true;

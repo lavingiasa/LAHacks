@@ -10,6 +10,9 @@
 		534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E018F995FB008AC9C6 /* SetUpViewController.m */; };
 		534070E418F9964D008AC9C6 /* Punishment.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E318F9964D008AC9C6 /* Punishment.m */; };
 		9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */; };
+		9736EE3B18F9BF3500B6EDDF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736EE3918F9BF3500B6EDDF /* FacebookSDK.framework */; };
+		9736EE3C18F9BF3500B6EDDF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736EE3A18F9BF3500B6EDDF /* Parse.framework */; };
+		9736EE3F18F9BFA100B6EDDF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736EE3E18F9BFA100B6EDDF /* LoginViewController.m */; };
 		975150A018F940ED007C5EA4 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751509F18F940ED007C5EA4 /* SectionModel.m */; };
 		975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 975150A218F95B7A007C5EA4 /* SectionsTable.m */; };
 		97D025D718F92DA100583527 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D025D618F92DA100583527 /* Foundation.framework */; };
@@ -46,6 +49,10 @@
 		534070E318F9964D008AC9C6 /* Punishment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Punishment.m; sourceTree = "<group>"; };
 		9736EE3618F9678A00B6EDDF /* SectionInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionInformationViewController.h; sourceTree = "<group>"; };
 		9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionInformationViewController.m; sourceTree = "<group>"; };
+		9736EE3918F9BF3500B6EDDF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		9736EE3A18F9BF3500B6EDDF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9736EE3D18F9BFA100B6EDDF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		9736EE3E18F9BFA100B6EDDF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9751509E18F940ED007C5EA4 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
 		9751509F18F940ED007C5EA4 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
 		975150A118F95B7A007C5EA4 /* SectionsTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsTable.h; sourceTree = "<group>"; };
@@ -78,8 +85,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D025D918F92DA100583527 /* CoreGraphics.framework in Frameworks */,
+				9736EE3B18F9BF3500B6EDDF /* FacebookSDK.framework in Frameworks */,
 				97D025DB18F92DA100583527 /* UIKit.framework in Frameworks */,
 				97D025D718F92DA100583527 /* Foundation.framework in Frameworks */,
+				9736EE3C18F9BF3500B6EDDF /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +127,8 @@
 		97D025D518F92DA100583527 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9736EE3918F9BF3500B6EDDF /* FacebookSDK.framework */,
+				9736EE3A18F9BF3500B6EDDF /* Parse.framework */,
 				97D025D618F92DA100583527 /* Foundation.framework */,
 				97D025D818F92DA100583527 /* CoreGraphics.framework */,
 				97D025DA18F92DA100583527 /* UIKit.framework */,
@@ -131,6 +142,8 @@
 			children = (
 				534070E218F9964D008AC9C6 /* Punishment.h */,
 				534070E318F9964D008AC9C6 /* Punishment.m */,
+				9736EE3D18F9BFA100B6EDDF /* LoginViewController.h */,
+				9736EE3E18F9BFA100B6EDDF /* LoginViewController.m */,
 				534070DF18F995FB008AC9C6 /* SetUpViewController.h */,
 				534070E018F995FB008AC9C6 /* SetUpViewController.m */,
 				97D0260D18F9358C00583527 /* Images */,
@@ -294,6 +307,7 @@
 				534070E418F9964D008AC9C6 /* Punishment.m in Sources */,
 				975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */,
 				9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */,
+				9736EE3F18F9BFA100B6EDDF /* LoginViewController.m in Sources */,
 				97D025E318F92DA100583527 /* main.m in Sources */,
 				534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */,
 				975150A018F940ED007C5EA4 /* SectionModel.m in Sources */,
@@ -425,6 +439,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lavingiasa/Dropbox/USC/Hackathons/LAHacks2014/iOS/Sloth,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sloth/Sloth-Prefix.pch";
 				INFOPLIST_FILE = "Sloth/Sloth-Info.plist";
@@ -441,6 +459,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lavingiasa/Dropbox/USC/Hackathons/LAHacks2014/iOS/Sloth,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sloth/Sloth-Prefix.pch";
 				INFOPLIST_FILE = "Sloth/Sloth-Info.plist";

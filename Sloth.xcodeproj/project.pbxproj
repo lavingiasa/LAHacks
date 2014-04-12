@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		975150A018F940ED007C5EA4 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751509F18F940ED007C5EA4 /* SectionModel.m */; };
+		975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 975150A218F95B7A007C5EA4 /* SectionsTable.m */; };
 		97D025D718F92DA100583527 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D025D618F92DA100583527 /* Foundation.framework */; };
 		97D025D918F92DA100583527 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D025D818F92DA100583527 /* CoreGraphics.framework */; };
 		97D025DB18F92DA100583527 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D025DA18F92DA100583527 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		9751509E18F940ED007C5EA4 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
 		9751509F18F940ED007C5EA4 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
+		975150A118F95B7A007C5EA4 /* SectionsTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsTable.h; sourceTree = "<group>"; };
+		975150A218F95B7A007C5EA4 /* SectionsTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionsTable.m; sourceTree = "<group>"; };
 		97D025D318F92DA100583527 /* Sloth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D025D618F92DA100583527 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97D025D818F92DA100583527 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				97D025DD18F92DA100583527 /* Supporting Files */,
 				9751509E18F940ED007C5EA4 /* SectionModel.h */,
 				9751509F18F940ED007C5EA4 /* SectionModel.m */,
+				975150A118F95B7A007C5EA4 /* SectionsTable.h */,
+				975150A218F95B7A007C5EA4 /* SectionsTable.m */,
 			);
 			path = Sloth;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			files = (
 				97D025ED18F92DA100583527 /* ViewController.m in Sources */,
 				97D025E718F92DA100583527 /* AppDelegate.m in Sources */,
+				975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */,
 				97D025E318F92DA100583527 /* main.m in Sources */,
 				975150A018F940ED007C5EA4 /* SectionModel.m in Sources */,
 			);

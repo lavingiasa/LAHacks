@@ -4,6 +4,7 @@
 #import "LoginViewController.h"
 #import "UserDetailsViewController.h"
 #import <Parse/Parse.h>
+#import "SetUpViewController.h"
 
 @implementation LoginViewController
 
@@ -16,7 +17,9 @@
     
     // Check if user is cached and linked to Facebook, if so, bypass login    
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-    //    [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:NO];
+      UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+      SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"PostLoginVC"];
+      [self presentViewController:viewController animated:YES completion:nil];
     }
 }
 
@@ -56,9 +59,15 @@
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
             //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"PostLoginVC"];
+            [self presentViewController:viewController animated:YES completion:nil];
         } else {
             NSLog(@"User with facebook logged in!");
-            //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+              //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"PostLoginVC"];
+            [self presentViewController:viewController animated:YES completion:nil];
         }
     }];
     

@@ -21,6 +21,7 @@
 		97D025F818F92DA100583527 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D025DA18F92DA100583527 /* UIKit.framework */; };
 		97D0260018F92DA100583527 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97D025FE18F92DA100583527 /* InfoPlist.strings */; };
 		97D0260218F92DA100583527 /* SlothTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0260118F92DA100583527 /* SlothTests.m */; };
+		97D0260F18F9371E00583527 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D0260E18F9371E00583527 /* gear.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		97D025FD18F92DA100583527 /* SlothTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlothTests-Info.plist"; sourceTree = "<group>"; };
 		97D025FF18F92DA100583527 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97D0260118F92DA100583527 /* SlothTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlothTests.m; sourceTree = "<group>"; };
+		97D0260E18F9371E00583527 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = Images/gear.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		97D025DC18F92DA100583527 /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
+				97D0260D18F9358C00583527 /* Images */,
 				97D025E518F92DA100583527 /* AppDelegate.h */,
 				97D025E618F92DA100583527 /* AppDelegate.m */,
 				97D025E818F92DA100583527 /* Main.storyboard */,
@@ -150,6 +153,14 @@
 				97D025FE18F92DA100583527 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97D0260D18F9358C00583527 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				97D0260E18F9371E00583527 /* gear.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 			files = (
 				97D025EF18F92DA100583527 /* Images.xcassets in Resources */,
 				97D025E118F92DA100583527 /* InfoPlist.strings in Resources */,
+				97D0260F18F9371E00583527 /* gear.png in Resources */,
 				97D025EA18F92DA100583527 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

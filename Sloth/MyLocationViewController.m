@@ -94,6 +94,13 @@ bool placeSelected = false;
     [super viewDidLoad];
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
     [self.mapView addGestureRecognizer:longPressGesture];
+    //mapView.userTrackingMode=YES;
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = CLLocationCoordinate2DMake(34.0205, -118.2856);
+    mapRegion.span.latitudeDelta = 0.02;
+    mapRegion.span.longitudeDelta = 0.02;
+  
+  [mapView setRegion:mapRegion animated: YES];
 	// Do any additional setup after loading the view.
 }
 

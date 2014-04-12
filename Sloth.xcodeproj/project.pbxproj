@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E018F995FB008AC9C6 /* SetUpViewController.m */; };
+		534070E418F9964D008AC9C6 /* Punishment.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E318F9964D008AC9C6 /* Punishment.m */; };
 		9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */; };
 		975150A018F940ED007C5EA4 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751509F18F940ED007C5EA4 /* SectionModel.m */; };
 		975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 975150A218F95B7A007C5EA4 /* SectionsTable.m */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		534070DF18F995FB008AC9C6 /* SetUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUpViewController.h; sourceTree = "<group>"; };
+		534070E018F995FB008AC9C6 /* SetUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUpViewController.m; sourceTree = "<group>"; };
+		534070E218F9964D008AC9C6 /* Punishment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Punishment.h; sourceTree = "<group>"; };
+		534070E318F9964D008AC9C6 /* Punishment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Punishment.m; sourceTree = "<group>"; };
 		9736EE3618F9678A00B6EDDF /* SectionInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionInformationViewController.h; sourceTree = "<group>"; };
 		9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionInformationViewController.m; sourceTree = "<group>"; };
 		9751509E18F940ED007C5EA4 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
@@ -123,6 +129,10 @@
 		97D025DC18F92DA100583527 /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
+				534070E218F9964D008AC9C6 /* Punishment.h */,
+				534070E318F9964D008AC9C6 /* Punishment.m */,
+				534070DF18F995FB008AC9C6 /* SetUpViewController.h */,
+				534070E018F995FB008AC9C6 /* SetUpViewController.m */,
 				97D0260D18F9358C00583527 /* Images */,
 				97D025E518F92DA100583527 /* AppDelegate.h */,
 				97D025E618F92DA100583527 /* AppDelegate.m */,
@@ -281,9 +291,11 @@
 			files = (
 				97D025ED18F92DA100583527 /* ViewController.m in Sources */,
 				97D025E718F92DA100583527 /* AppDelegate.m in Sources */,
+				534070E418F9964D008AC9C6 /* Punishment.m in Sources */,
 				975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */,
 				9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */,
 				97D025E318F92DA100583527 /* main.m in Sources */,
+				534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */,
 				975150A018F940ED007C5EA4 /* SectionModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

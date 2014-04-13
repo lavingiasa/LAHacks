@@ -190,7 +190,7 @@
 		97D025D518F92DA100583527 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5370F34618F9D3D20037E849 /* Parse.framework */,
+				97227F7818F9E46800103B25 /* MapKit.framework */,
 				97227F5E18F9C30E00103B25 /* SystemConfiguration.framework */,
 				97227F5C18F9C2F600103B25 /* StoreKit.framework */,
 				97227F5A18F9C2EE00103B25 /* Security.framework */,
@@ -200,6 +200,7 @@
 				97227F5218F9C2BD00103B25 /* AudioToolbox.framework */,
 				97227F5018F9C28800103B25 /* CoreLocation.framework */,
 				9736EE3918F9BF3500B6EDDF /* FacebookSDK.framework */,
+				9736EE3A18F9BF3500B6EDDF /* Parse.framework */,
 				97D025D618F92DA100583527 /* Foundation.framework */,
 				97D025D818F92DA100583527 /* CoreGraphics.framework */,
 				97D025DA18F92DA100583527 /* UIKit.framework */,
@@ -222,6 +223,8 @@
 				97D025E518F92DA100583527 /* AppDelegate.h */,
 				97D025E618F92DA100583527 /* AppDelegate.m */,
 				97227F4D18F9C1BE00103B25 /* UserDetailsViewController.h */,
+				97D025E818F92DA100583527 /* Main.storyboard */,
+				97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */,
 				97D025E818F92DA100583527 /* Main.storyboard */,
 				5370F35118FA04680037E849 /* InputViewController.h */,
 				5370F35218FA04680037E849 /* InputViewController.m */,

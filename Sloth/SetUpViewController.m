@@ -110,9 +110,8 @@
     }
     
     if ([self.punishmentSelected isEqual: @"Text Message"] ) {
-        NSLog(@"%@",[UserDetailsViewController getName]);
         self.userInfo = [PFObject objectWithClassName:@"UserInfo"];
-//        self.userInfo[@"Name"] = [UserDetailsViewController getUserName];
+        self.userInfo[@"Name"] = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
         self.userInfo[@"Punishment"] = @"Text Message";
         self.userInfo[@"punishmentReceiver"] = self.phoneTF.text;
         self.userInfo[@"punishmnetObject"] = self.messageTF.text;

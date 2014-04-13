@@ -33,14 +33,15 @@ static NSString* nameString;
     self.rowDataArray = [@[@"N/A", @"N/A", @"N/A", @"N/A"] mutableCopy];
     
     // If the user is already logged in, display any previously cached values before we get the latest from Facebook.
-    if ([PFUser currentUser]) {
-        [self updateProfile];
-    }
+//    if ([PFUser currentUser]) {
+//        [self updateProfile];
+//    }
     
     // Send request to Facebook
     FBRequest *request = [FBRequest requestForMe];
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         // handle response
+        NSLog(@"TEST TEST TEST");
         if (!error) {
             // Parse the data received
             NSDictionary *userData = (NSDictionary *)result;
@@ -60,6 +61,13 @@ static NSString* nameString;
             
             if (userData[@"name"]) {
                 userProfile[@"name"] = userData[@"name"];
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                
+                [defaults objectForKey:userProfile[@"name"]];
+                
+
+//             [[NSUserDefaults standardUserDefaults] setObject:@ forKey:userProfile[@"name"]];
+                
             }
             
             if (userData[@"location"][@"name"]) {

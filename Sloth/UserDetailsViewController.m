@@ -9,7 +9,7 @@
 
 
 #pragma mark - UIViewController
-
+static NSString* nameString;
 
 
 - (void)viewDidLoad {
@@ -46,7 +46,9 @@
             NSDictionary *userData = (NSDictionary *)result;
             
             NSString *facebookID = userData[@"id"];
-            
+            nameString = userData[@"name"];
+
+          
             NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
             
             
@@ -167,6 +169,11 @@
     
     // Return to login view controller
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
++(NSString*) getName
+{
+  return nameString;
 }
 
 // Set received values if they are not nil and reload the table

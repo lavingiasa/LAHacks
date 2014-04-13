@@ -18,7 +18,7 @@
 
 // UINavigationBar button touch handler
 - (void)logoutButtonTouchHandler:(id)sender;
-
++ (NSString*) getName;
 
 
 @end

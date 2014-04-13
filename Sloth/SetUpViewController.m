@@ -8,6 +8,7 @@
 
 #import "SetUpViewController.h"
 #import "UserDetailsViewController.h"
+#import "SectionModel.h"
 #import <Parse/Parse.h>
 
 
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 @property (weak, nonatomic) IBOutlet UILabel *stepperLabel;
 @property (weak, nonatomic) IBOutlet UIButton *punishmentButton;
+@property (weak, nonatomic) IBOutlet UITableView *scheduleTable;
 
 @property (strong, nonatomic) NSArray *punishmentsArray;
 @property (weak, nonatomic) IBOutlet UIView *textView;
@@ -108,7 +110,7 @@
     }
     
     if ([self.punishmentSelected isEqual: @"Text Message"] ) {
-        NSLog(@"%@",[UserDetailsViewController getUserName]);
+        NSLog(@"%@",[UserDetailsViewController getName]);
         self.userInfo = [PFObject objectWithClassName:@"UserInfo"];
 //        self.userInfo[@"Name"] = [UserDetailsViewController getUserName];
         self.userInfo[@"Punishment"] = @"Text Message";
@@ -224,8 +226,6 @@
     
 }*/
 
-- (IBAction)scheduleButtonPressed:(id)sender {
-    
-}
+
 
 @end

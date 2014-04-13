@@ -196,7 +196,7 @@
   for (int i = 0; i < maxIndex; i++) {
     NSString * name = [tokenizedArray objectAtIndex:(i*5 + 0)];
     NSString * start = [tokenizedArray objectAtIndex:(i*5 + 1)];
-    NSString * end = [tokenizedArray objectAtIndex:(i*5 + 2)];
+    NSString * end = [tokenizedArray objectAtIndex:(i*5 + 2)]; 
     NSNumber * x = [tokenizedArray objectAtIndex:(i*5 + 3)];
     double xloc = [x doubleValue];
     NSNumber * y = [tokenizedArray objectAtIndex:(i*5 + 4)];

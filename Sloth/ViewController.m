@@ -117,7 +117,7 @@
   
     SectionModel *currentSection = [[SectionModel getSections] objectAtIndex:indexOfTheMatchingSection];
                                     
-    if(abs(newLocation.coordinate.latitude - [currentSection xLocation]) < .1 && abs(newLocation.coordinate.longitude - [currentSection yLocation]) < .1 )
+    if(abs(newLocation.coordinate.latitude - [currentSection xLocation]) < .0002 && abs(newLocation.coordinate.longitude - [currentSection yLocation]) < .0002 )
     {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Checking In"
                                                       message:@"You checked in!"

@@ -5,6 +5,7 @@
 #import "UserDetailsViewController.h"
 #import <Parse/Parse.h>
 #import "SetUpViewController.h"
+#import "ViewController.h"
 
 @implementation LoginViewController
 
@@ -21,11 +22,29 @@
 //    }
     // Check if user is cached and linked to Facebook, if so, bypass login
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-      UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-      SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"AfterLoginVC"];
-      [self presentViewController:viewController animated:YES completion:nil];
+      if (![@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
+                                  objectForKey:@"firstTimer"]]) {
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"AfterLoginVC"];
+        [self presentViewController:viewController animated:YES completion:nil];
+        
+      }else{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ViewController *viewController = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        [self presentViewController:viewController animated:YES completion:nil];
+      }
+      
+      
     }
 }
+
+/*
+ 
+ [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"firstTimer"];
+ [[NSUserDefaults standardUserDefaults] synchronize];
+ 
+ */
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -73,16 +92,35 @@
                         }
             }];
             
+          if (![@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
+                                      objectForKey:@"firstTimer"]]) {
+            
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"AfterLoginVC"];
             [self presentViewController:viewController animated:YES completion:nil];
+            
+          }else{
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            ViewController *viewController = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+            [self presentViewController:viewController animated:YES completion:nil];
+          }
+
         } else {
             NSLog(@"User with facebook logged in!");
               //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
            
+          if (![@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
+                                      objectForKey:@"firstTimer"]]) {
+            
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"AfterLoginVC"];
             [self presentViewController:viewController animated:YES completion:nil];
+            
+          }else{
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            ViewController *viewController = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+            [self presentViewController:viewController animated:YES completion:nil];
+          }
         }
     }];
     

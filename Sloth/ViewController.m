@@ -10,6 +10,8 @@
 #import "SectionModel.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *amountOfTuitionDollarsLost;
+@property (strong, nonatomic) IBOutlet UILabel *numberOfClassesMissd;
 
 @end
 
@@ -21,6 +23,8 @@
 @synthesize cancelDays;
 @synthesize classesMissedThisSemester;
 @synthesize numberOfClassesPerDay;
+@synthesize numberOfClassesMissd;
+@synthesize amountOfTuitionDollarsLost;
 
 - (void)viewDidLoad
 {
@@ -29,6 +33,11 @@
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    //num classes missed
+    [numberOfClassesMissd setText:@"asdf"];
+    [amountOfTuitionDollarsLost setText:@"asdfasdf"];
+    [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"firstTimer"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -126,6 +135,9 @@
                                             otherButtonTitles:nil];
       [alert show];
       //INCREASE THE COUNT ON THE SERVER
+      
+     
+      
       return;
     }else{
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wrong Location"

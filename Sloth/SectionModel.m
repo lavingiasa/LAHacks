@@ -117,7 +117,6 @@ static PFObject* userInfo = nil;
     userInfo[@"formattedString"] = _formattedString;
     [userInfo saveInBackground];
     
-     NSLog(@"TITTIES");
     
     return formattedString;
 }

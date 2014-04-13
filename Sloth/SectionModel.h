@@ -24,6 +24,7 @@
                andEndTime: (NSString *) end
                   andDays: (NSString * ) days;
 +(NSMutableArray *) getSections;
++(NSString *) getFormattedString;
 
 @end
 

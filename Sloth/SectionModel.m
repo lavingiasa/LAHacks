@@ -73,5 +73,18 @@
   return setOfSections;
 }
 
++(NSMutableString *) getFormattedString
+{
+  NSMutableString* formattedString = [[NSMutableString alloc]init];
+  
+  for(int i = 0; i < [setOfSections count]; i++)
+  {
+    [formattedString appendString: [NSString stringWithFormat:@"%i", i]];
+  }
+  
+  return formattedString;
+}
+
+
 @end
 

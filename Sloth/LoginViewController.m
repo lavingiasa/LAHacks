@@ -31,7 +31,7 @@
         
       }else{
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        ViewController *viewController = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        ViewController *viewController = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"SkipVC"];
         [self presentViewController:viewController animated:YES completion:nil];
       }
       
@@ -101,7 +101,7 @@
             
           }else{
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            ViewController *viewController = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+            ViewController *viewController = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"SkipVC"];
             [self presentViewController:viewController animated:YES completion:nil];
           }
 
@@ -118,7 +118,7 @@
             
           }else{
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            ViewController *viewController = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+            ViewController *viewController = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"SkipVC"];
             [self presentViewController:viewController animated:YES completion:nil];
           }
         }

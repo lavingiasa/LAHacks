@@ -39,10 +39,23 @@
     int monthOfYear = [compsM month];
   
     int guessOfDayNumber = monthOfYear * 30 + dayOfYear;
-    [DaysTillEndLabel setText:[NSString stringWithFormat:@"%s%d%s","Around: ",guessOfDayNumber, " Days Left"]];
+    if(guessOfDayNumber < 170)
+    {
+      [DaysTillEndLabel setText:[NSString stringWithFormat:@"%s%d%s","Around: ",(170 - guessOfDayNumber), " Days Left"]];
+
+    }else if(guessOfDayNumber < 340)
+    {
+      [DaysTillEndLabel setText:[NSString stringWithFormat:@"%s%d%s","Around: ", (340 - guessOfDayNumber), " Days Left"]];
+
+    }
     if((guessOfDayNumber < 266 && guessOfDayNumber > 170) || (guessOfDayNumber > 340) || (guessOfDayNumber < 12))
     {
       [resetButton setEnabled:YES];
+      [DaysTillEndLabel setText:[NSString stringWithFormat:@"%s","Vacation!"]];
+      resetButton.hidden = NO;
+    }else{
+      [resetButton setEnabled:NO];
+      resetButton.hidden = YES;
     }
   
   // Do any additional setup after loading the view.

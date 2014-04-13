@@ -33,6 +33,8 @@
 		97227F7518F9C64E00103B25 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97227F6C18F9C64E00103B25 /* Default-568h@2x.png */; };
 		97227F7618F9C64E00103B25 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 97227F6D18F9C64E00103B25 /* Default.png */; };
 		97227F7718F9C64E00103B25 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97227F6E18F9C64E00103B25 /* Default@2x.png */; };
+		97227F7918F9E46800103B25 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F7818F9E46800103B25 /* MapKit.framework */; };
+		97227F7C18F9E4BE00103B25 /* MyLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97227F7B18F9E4BE00103B25 /* MyLocationViewController.m */; };
 		9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */; };
 		9736EE3B18F9BF3500B6EDDF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736EE3918F9BF3500B6EDDF /* FacebookSDK.framework */; };
 		9736EE3F18F9BFA100B6EDDF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736EE3E18F9BFA100B6EDDF /* LoginViewController.m */; };
@@ -97,6 +99,9 @@
 		97227F6C18F9C64E00103B25 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		97227F6D18F9C64E00103B25 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		97227F6E18F9C64E00103B25 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		97227F7818F9E46800103B25 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		97227F7A18F9E4BE00103B25 /* MyLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationViewController.h; sourceTree = "<group>"; };
+		97227F7B18F9E4BE00103B25 /* MyLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationViewController.m; sourceTree = "<group>"; };
 		9736EE3618F9678A00B6EDDF /* SectionInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionInformationViewController.h; sourceTree = "<group>"; };
 		9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionInformationViewController.m; sourceTree = "<group>"; };
 		9736EE3918F9BF3500B6EDDF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -133,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97227F7918F9E46800103B25 /* MapKit.framework in Frameworks */,
 				97D025DB18F92DA100583527 /* UIKit.framework in Frameworks */,
 				97227F5F18F9C30E00103B25 /* SystemConfiguration.framework in Frameworks */,
 				97227F5D18F9C2F600103B25 /* StoreKit.framework in Frameworks */,
@@ -216,7 +222,6 @@
 				97D025E518F92DA100583527 /* AppDelegate.h */,
 				97D025E618F92DA100583527 /* AppDelegate.m */,
 				97227F4D18F9C1BE00103B25 /* UserDetailsViewController.h */,
-				97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */,
 				97D025E818F92DA100583527 /* Main.storyboard */,
 				5370F35118FA04680037E849 /* InputViewController.h */,
 				5370F35218FA04680037E849 /* InputViewController.m */,
@@ -232,6 +237,8 @@
 				975150A218F95B7A007C5EA4 /* SectionsTable.m */,
 				9736EE3618F9678A00B6EDDF /* SectionInformationViewController.h */,
 				9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */,
+				97227F7A18F9E4BE00103B25 /* MyLocationViewController.h */,
+				97227F7B18F9E4BE00103B25 /* MyLocationViewController.m */,
 			);
 			path = Sloth;
 			sourceTree = "<group>";
@@ -400,6 +407,7 @@
 				5370F34A18F9EB6B0037E849 /* Schedule.m in Sources */,
 				97D025ED18F92DA100583527 /* ViewController.m in Sources */,
 				97D025E718F92DA100583527 /* AppDelegate.m in Sources */,
+				97227F7C18F9E4BE00103B25 /* MyLocationViewController.m in Sources */,
 				534070E418F9964D008AC9C6 /* Punishment.m in Sources */,
 				975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */,
 				9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */,

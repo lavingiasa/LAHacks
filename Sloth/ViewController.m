@@ -15,6 +15,13 @@
 
 @implementation ViewController
 
+@synthesize classesHitToday;
+@synthesize moneyWasted;
+@synthesize graceDays;
+@synthesize cancelDays;
+@synthesize classesMissedThisSemester;
+@synthesize numberOfClassesPerDay;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

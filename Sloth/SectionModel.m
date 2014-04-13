@@ -79,9 +79,25 @@
   
   for(int i = 0; i < [setOfSections count]; i++)
   {
-    [formattedString appendString: [NSString stringWithFormat:@"%i", i]];
+    NSMutableString* days = [[NSMutableString alloc] init];
+    for(int j = 0; j < 5; j++)
+    {
+      if([[[setOfSections objectAtIndex:i] daysOfClass] objectAtIndex:j] == [NSNumber numberWithBool:YES])
+      {
+        [days appendString: @"1"];
+      }else{
+        [days appendString: @"0"];
+      }
+    }
+    if(i == [setOfSections count] - 1)
+    {
+      [formattedString appendString: [NSString stringWithFormat:@"%@|%@|%@|%f|%f|%@", [[setOfSections objectAtIndex:i] sectionName], [[setOfSections objectAtIndex:i] startTime], [[setOfSections objectAtIndex:i] endTime], [[setOfSections objectAtIndex:i] xLocation], [[setOfSections objectAtIndex:i] yLocation], days]];
+    }else{
+      [formattedString appendString: [NSString stringWithFormat:@"%@|%@|%@|%f|%f|%@|", [[setOfSections objectAtIndex:i] sectionName], [[setOfSections objectAtIndex:i] startTime], [[setOfSections objectAtIndex:i] endTime], [[setOfSections objectAtIndex:i] xLocation], [[setOfSections objectAtIndex:i] yLocation], days]];
+    }
   }
   
+  NSLog(formattedString);
   return formattedString;
 }
 

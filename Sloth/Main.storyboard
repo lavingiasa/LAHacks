@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j2U-Bg-JZc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j2U-Bg-JZc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -49,7 +49,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="222" style="plain" systemItem="fixedSpace" id="yXh-V4-nyg"/>
-                                    <barButtonItem systemItem="edit" id="mDb-Zq-LDd"/>
+                                    <barButtonItem systemItem="done" id="mDb-Zq-LDd">
+                                        <connections>
+                                            <segue destination="Cbo-Ef-fmg" kind="push" id="f1J-bx-oyw"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -76,6 +80,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dI-Ys-EmU" userLabel="BackgroundButton">
+                                <rect key="frame" x="-48" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="E8f-nr-cDp" eventType="touchUpInside" id="rXm-gW-oRT"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbF-VH-UCs">
                                 <rect key="frame" x="14" y="104" width="111" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -94,15 +108,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textfieldExit:" destination="E8f-nr-cDp" eventType="editingDidEndOnExit" id="NCc-ac-I6r"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25l-74-o4O">
                                 <rect key="frame" x="14" y="215" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Days:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUg-Mk-PaG">
-                                <rect key="frame" x="14" y="269" width="44" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -120,9 +131,9 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAC-Fn-ETC">
-                                <rect key="frame" x="33" y="298" width="86" height="22"/>
+                                <rect key="frame" x="20" y="269" width="79" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Monday" image="unchecked_box.png">
+                                <state key="normal" title="  MON" image="unchecked_box.png">
                                     <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -131,9 +142,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEL-dg-0oh">
-                                <rect key="frame" x="127" y="298" width="98" height="22"/>
+                                <rect key="frame" x="111" y="269" width="98" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Tuesday" image="unchecked_box.png">
+                                <state key="normal" title="  TUES" image="unchecked_box.png">
                                     <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -142,9 +153,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCw-aN-5t3">
-                                <rect key="frame" x="98" y="368" width="98" height="22"/>
+                                <rect key="frame" x="163" y="321" width="98" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Friday" image="unchecked_box.png">
+                                <state key="normal" title="  FRI" image="unchecked_box.png">
                                     <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -153,9 +164,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUl-Se-ftf">
-                                <rect key="frame" x="27" y="328" width="122" height="22"/>
+                                <rect key="frame" x="198" y="269" width="122" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Wednesday" image="unchecked_box.png">
+                                <state key="normal" title="  WED" image="unchecked_box.png">
                                     <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -164,9 +175,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8x-Ar-1qb">
-                                <rect key="frame" x="157" y="328" width="98" height="22"/>
+                                <rect key="frame" x="63" y="321" width="98" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Thursday" image="unchecked_box.png">
+                                <state key="normal" title="  THU" image="unchecked_box.png">
                                     <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -175,16 +186,24 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfL-xc-jnN">
-                                <rect key="frame" x="14" y="482" width="294" height="30"/>
+                                <rect key="frame" x="95" y="462" width="130" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save that class. Oh wait, you can't afford it">
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.83137261870000001" blue="0.49411767719999999" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="E8f-nr-cDp" eventType="touchUpInside" id="fmS-3y-kA2"/>
+                                    <segue destination="si8-ga-Qgl" kind="push" id="XCt-Oj-YZf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlM-0x-jGn">
-                                <rect key="frame" x="117" y="414" width="87" height="30"/>
+                                <rect key="frame" x="93" y="390" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.83137261870000001" blue="0.49411767719999999" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="Set Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -194,12 +213,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qmq-vo-MRI"/>
+                    <navigationItem key="navigationItem" id="9p8-VY-wAn"/>
                     <connections>
                         <outlet property="endTF" destination="Knp-uw-jUY" id="t9p-0R-LWt"/>
                         <outlet property="fridayButton" destination="mCw-aN-5t3" id="Qgs-R5-YcR"/>
                         <outlet property="mondayButton" destination="UAC-Fn-ETC" id="hWJ-w1-0NS"/>
                         <outlet property="nameTF" destination="xEz-NC-Rtx" id="F40-Pw-Cnd"/>
+                        <outlet property="saveButton" destination="vfL-xc-jnN" id="utG-1X-zUR"/>
                         <outlet property="startTF" destination="qC9-UQ-0Xk" id="l4W-dK-VAU"/>
                         <outlet property="thursdayButton" destination="n8x-Ar-1qb" id="8au-Vr-ayZ"/>
                         <outlet property="tuesdayButton" destination="TEL-dg-0oh" id="Irv-f7-A7h"/>
@@ -208,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrR-BN-p7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="-2375"/>
+            <point key="canvasLocation" x="1112" y="-2335"/>
         </scene>
         <!--Set Up View Controller-->
         <scene sceneID="KPK-gb-xjr">
@@ -328,7 +348,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sv-Dn-sld">
-                                <rect key="frame" x="20" y="518" width="255" height="30"/>
+                                <rect key="frame" x="20" y="491" width="255" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25098040700000002" green="0.83137261870000001" blue="0.49411767719999999" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="Set Class Schedule">
@@ -361,6 +381,7 @@
                         <outlet property="phoneTF" destination="5jg-vh-WgS" id="uiu-dW-0J4"/>
                         <outlet property="punishmentButton" destination="48l-Jn-9LN" id="pLs-K1-d02"/>
                         <outlet property="saveButton" destination="hKg-UL-VCk" id="BUg-Zx-dpL"/>
+                        <outlet property="setScheduleButton" destination="1Sv-Dn-sld" id="c1C-yg-Eko"/>
                         <outlet property="stepper" destination="KFR-C8-Pjb" id="CeS-zk-s4Z"/>
                         <outlet property="stepperLabel" destination="vlJ-Ce-JKs" id="BTf-9j-QEW"/>
                         <outlet property="textView" destination="4aZ-IG-gyJ" id="P2v-XP-h31"/>
@@ -712,4 +733,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="XCt-Oj-YZf"/>
+        <segue reference="f1J-bx-oyw"/>
+    </inferredMetricsTieBreakers>
 </document>

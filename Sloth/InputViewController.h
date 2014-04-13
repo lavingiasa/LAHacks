@@ -10,6 +10,6 @@
 
 
 
-@interface InputViewController : UIViewController
+@interface InputViewController : UIViewController 
 
 @end

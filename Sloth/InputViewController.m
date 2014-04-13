@@ -7,11 +7,10 @@
 //
 
 #import "InputViewController.h"
+#import "MyLocationViewController.h"
+#import "SectionModel.h"
 
-@interface InputViewController ()
-
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
+@interface InputViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
 @property (weak, nonatomic) IBOutlet UITextField *startTF;
@@ -27,8 +26,8 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *fridayButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
-@property (weak, nonatomic) IBOutlet UITextField *daysTF;
 
 @end
 
@@ -60,11 +59,16 @@ UIButton *checkbox1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _startTF.delegate = self;
+    _endTF.delegate = self;
   
 }
 
 - (IBAction)MondayButton:(id)sender
 {
+    [self.nameTF resignFirstResponder];
+    [self.startTF resignFirstResponder];
+    [self.endTF resignFirstResponder];
   if(mondayBoxSelected == YES)
   {
     [mondayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
@@ -78,6 +82,9 @@ UIButton *checkbox1;
 
 - (IBAction)TuesdayButton:(id)sender
 {
+    [self.nameTF resignFirstResponder];
+    [self.startTF resignFirstResponder];
+    [self.endTF resignFirstResponder];
   if(tuesdayBoxSelected == YES)
   {
     [tuesdayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
@@ -89,6 +96,9 @@ UIButton *checkbox1;
 }
 - (IBAction)WednesdayButton:(id)sender
 {
+    [self.nameTF resignFirstResponder];
+    [self.startTF resignFirstResponder];
+    [self.endTF resignFirstResponder];
   if(wednesdayBoxSelected == YES)
   {
     [wednesdayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
@@ -100,6 +110,9 @@ UIButton *checkbox1;
 }
 - (IBAction)ThursdayButton:(id)sender
 {
+    [self.nameTF resignFirstResponder];
+    [self.startTF resignFirstResponder];
+    [self.endTF resignFirstResponder];
   if(thursdayBoxSelected == YES)
   {
     [thursdayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
@@ -112,6 +125,9 @@ UIButton *checkbox1;
 }
 - (IBAction)FridayButton:(id)sender
 {
+    [self.nameTF resignFirstResponder];
+    [self.startTF resignFirstResponder];
+    [self.endTF resignFirstResponder];
   if(fridayBoxSelected == YES)
   {
     [fridayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
@@ -131,7 +147,106 @@ UIButton *checkbox1;
 
 
 - (IBAction)saveButtonPressed:(id)sender {
+    
+   
+    
+    if ((_nameTF.text.length > 0) && (_startTF.text.length > 2) && (_endTF.text.length > 2) && ((mondayBoxSelected) || (tuesdayBoxSelected) || (wednesdayBoxSelected) || (thursdayBoxSelected) || (fridayBoxSelected)) && ([MyLocationViewController coordinateOfAnnotation].latitude != 0) && ([MyLocationViewController coordinateOfAnnotation].longitude != 0)) {
+        
+        NSString *startTime = @"";
+        NSString *endTime = @"";
+        if (_startTF.text.length == 3) {
+           startTime = [NSString stringWithFormat:@"%@%@", @"0", _startTF.text];
+        }
+        else {
+            startTime = _startTF.text;
+        }
+        if (_endTF.text.length == 3) {
+           endTime = [NSString stringWithFormat:@"%@%@", @"0", _endTF.text];
+        }
+        else {
+            endTime = _endTF.text;
+        }
+        
+        NSString *className = _nameTF.text;
+        
+        NSString *days = @"";
+        
+        for (int i = 0; i < 6; i++) {
+            if ((i == 0) && (mondayBoxSelected)) {
+                days = [NSString stringWithFormat:@"%@%@", days, @"1"];
+            }
+            else {
+                days = [NSString stringWithFormat:@"%@%@", days, @"0"];
+            }
+            if ((i == 2) && (tuesdayBoxSelected)) {
+                days = [NSString stringWithFormat:@"%@%@", days, @"1"];
+            }
+            else {
+                days = [NSString stringWithFormat:@"%@%@", days, @"0"];
+            }
+            if ((i == 3) && (wednesdayBoxSelected)) {
+                days = [NSString stringWithFormat:@"%@%@", days, @"1"];
+            }
+            else {
+                days = [NSString stringWithFormat:@"%@%@", days, @"0"];
+            }
+            if ((i == 4) && (thursdayBoxSelected)) {
+                days = [NSString stringWithFormat:@"%@%@", days, @"1"];
+            }
+            else {
+                days = [NSString stringWithFormat:@"%@%@", days, @"0"];
+            }
+            if ((i == 5) && (fridayBoxSelected)) {
+                days = [NSString stringWithFormat:@"%@%@", days, @"1"];
+            }
+            else {
+                days = [NSString stringWithFormat:@"%@%@", days, @"0"];
+            }
+        }
+       
+        [[SectionModel alloc] initWithSectionName:className andStartTime:startTime andxLoc: [MyLocationViewController coordinateOfAnnotation].latitude andyLoc:[MyLocationViewController coordinateOfAnnotation].longitude andEndTime:endTime andDays:days];
+        
+        NSMutableArray * sections = [SectionModel getSections];
+        NSLog(@"%d", sections.count);
+        
+        
+        
+        
+        
+    }
+    else {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Incomplete!"
+                                                        message:@"Please fill all the fields"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+
+        
+    }
+    
+    
+    
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    return (newLength > 4) ? NO : YES;
+}
+
+
+- (IBAction)backgroundTouched:(id)sender {
+    [self.nameTF resignFirstResponder];
+    [self.startTF resignFirstResponder];
+    [self.endTF resignFirstResponder];
+}
+
+- (IBAction)textfieldExit:(id)sender {
+    [sender resignFirstResponder];
+}
+
+
 
 
 @end

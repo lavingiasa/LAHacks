@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "Sloth": {
+            "applicationId": "TSmN8m89HYGPOYghsOKLknjwzC9vJXYJ4xarqFiQ", 
+            "masterKey": "mMrNMPXuHZcGVxrAguClr67w0ZQu0JAu6OJNoqtw"
+        }, 
+        "_default": {
+            "link": "Sloth"
+        }
+    }
+}

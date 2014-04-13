@@ -4,10 +4,13 @@
 #import "UserDetailsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
+
 @implementation UserDetailsViewController
 
 
 #pragma mark - UIViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

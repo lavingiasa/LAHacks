@@ -77,9 +77,9 @@
 
 - (void)itemSelectedatRow:(NSInteger)row
 {
-    NSLog(@"row %lu selected", (unsigned long)row);
+//    NSLog(@"row %lu selected", (unsigned long)row);
     [self.punishmentButton setTitle:[self.punishmentsArray objectAtIndex:row] forState:UIControlStateNormal];
-    if ([[self.punishmentsArray objectAtIndex:row]  isEqual: @"Text Message"] )
+    if ([[self.punishmentsArray objectAtIndex:row]  isEqual: @"Text Message"] ) {
         [self.textView setHidden:NO];
     else if ([[self.punishmentsArray objectAtIndex:row]  isEqual: @"Embarrassing Picture"] ) {
         [self.pictureView setHidden:NO];
@@ -108,6 +108,16 @@
 - (IBAction)saveButtonTapped:(id)sender {
     if (self.completionHandler) {
         self.completionHandler(self.messageTF.text);
+    }
+    
+    if ([self.punishmentSelected isEqual: @"Text Message"] ) {
+        NSLog(@"%@",[UserDetailsViewController getUserName]);
+        self.userInfo = [PFObject objectWithClassName:@"UserInfo"];
+//        self.userInfo[@"Name"] = [UserDetailsViewController getUserName];
+        self.userInfo[@"Punishment"] = @"Text Message";
+        self.userInfo[@"punishmentReceiver"] = self.phoneTF.text;
+        self.userInfo[@"punishmnetObject"] = self.messageTF.text;
+        [self.userInfo saveInBackground];
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface SectionModel : NSObject
 
@@ -25,6 +26,7 @@
                   andDays: (NSString * ) days;
 +(NSMutableArray *) getSections;
 +(NSString *) getFormattedString;
++(PFObject *) userInfo;
 
 @end
 

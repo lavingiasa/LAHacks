@@ -7,6 +7,14 @@
 //
 
 #import "SectionModel.h"
+#import <Parse/Parse.h>
+
+//@interface SectionModel()
+//
+//@property (strong, nonatomic) PFObject* userInfo;
+//
+//@end
+static PFObject* userInfo = nil;
 
 @implementation SectionModel
   @synthesize sectionName;
@@ -15,6 +23,8 @@
   @synthesize xLocation;
   @synthesize yLocation;
   @synthesize daysOfClass;
+
+
 
   static NSMutableArray* setOfSections;
 
@@ -65,6 +75,8 @@
   }
 
   [setOfSections addObject:self];
+
+[SectionModel getFormattedString];
   return self;
 }
 
@@ -97,8 +109,17 @@
     }
   }
   
-  NSLog(formattedString);
-  return formattedString;
+   
+    
+    NSString *_formattedString = (NSString*)formattedString;
+    
+    PFObject *userInfo = [PFObject objectWithClassName:@"UserInfo"];
+    userInfo[@"formattedString"] = _formattedString;
+    [userInfo saveInBackground];
+    
+     NSLog(@"TITTIES");
+    
+    return formattedString;
 }
 
 

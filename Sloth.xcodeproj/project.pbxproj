@@ -221,8 +221,6 @@
 				97D025E518F92DA100583527 /* AppDelegate.h */,
 				97D025E618F92DA100583527 /* AppDelegate.m */,
 				97517FB918FA252B00D35F43 /* Main.storyboard */,
-				97227F4D18F9C1BE00103B25 /* UserDetailsViewController.h */,
-				97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */,
 				5370F35118FA04680037E849 /* InputViewController.h */,
 				5370F35218FA04680037E849 /* InputViewController.m */,
 				5370F34818F9EB6B0037E849 /* Schedule.h */,
@@ -237,6 +235,8 @@
 				9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */,
 				97227F7A18F9E4BE00103B25 /* MyLocationViewController.h */,
 				97227F7B18F9E4BE00103B25 /* MyLocationViewController.m */,
+				97227F4D18F9C1BE00103B25 /* UserDetailsViewController.h */,
+				97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */,
 				97D025DD18F92DA100583527 /* Supporting Files */,
 				97D0260D18F9358C00583527 /* Images */,
 				97D025EE18F92DA100583527 /* Images.xcassets */,
@@ -340,7 +340,7 @@
 				ORGANIZATIONNAME = SKAD;
 				TargetAttributes = {
 					97D025D218F92DA100583527 = {
-						DevelopmentTeam = 7FX28RKSGV;
+						DevelopmentTeam = 6PP5HKJ3Z8;
 					};
 					97D025F318F92DA100583527 = {
 						TestTargetID = 97D025D218F92DA100583527;

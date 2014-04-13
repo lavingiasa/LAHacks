@@ -117,6 +117,8 @@
         self.userInfo[@"punishmnetObject"] = self.messageTF.text;
         [self.userInfo saveInBackground];
     }
+    
+    
 }
 
 - (IBAction)textFieldExit:(id)sender {

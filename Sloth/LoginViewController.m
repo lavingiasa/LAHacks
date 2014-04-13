@@ -15,7 +15,11 @@
     [super viewDidLoad];
     self.title = @"Facebook Profile";
     
-    // Check if user is cached and linked to Facebook, if so, bypass login    
+    if ([PFUser currentUser]) {
+        [PFFacebookUtils unlinkUser:[PFUser currentUser]];
+
+    }
+    // Check if user is cached and linked to Facebook, if so, bypass login
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
       UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
       SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"AfterLoginVC"];
@@ -59,12 +63,23 @@
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
             //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+            
+            [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *FBuser, NSError *error) {
+                if (error) { }
+                else { NSString *username = [FBuser name];
+                       NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                      [defaults setObject:username forKey:@"username"];
+                    NSLog(@"Username: %@", username);
+                        }
+            }];
+            
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"AfterLoginVC"];
             [self presentViewController:viewController animated:YES completion:nil];
         } else {
             NSLog(@"User with facebook logged in!");
               //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+           
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"AfterLoginVC"];
             [self presentViewController:viewController animated:YES completion:nil];

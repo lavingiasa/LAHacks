@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A3C6DB418FA052D00233CC0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3C6DB318FA052D00233CC0 /* Parse.framework */; };
 		2A3C6DB518FA052D00233CC0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3C6DB318FA052D00233CC0 /* Parse.framework */; };
 		534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E018F995FB008AC9C6 /* SetUpViewController.m */; };
 		534070E418F9964D008AC9C6 /* Punishment.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E318F9964D008AC9C6 /* Punishment.m */; };
@@ -212,12 +211,11 @@
 		97D025DC18F92DA100583527 /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
-				97D025E818F92DA100583527 /* Main.storyboard */,
 				534070E218F9964D008AC9C6 /* Punishment.h */,
 				534070E318F9964D008AC9C6 /* Punishment.m */,
 				9736EE3D18F9BFA100B6EDDF /* LoginViewController.h */,
-				97227F6418F9C62300103B25 /* LoginViewController.xib */,
 				9736EE3E18F9BFA100B6EDDF /* LoginViewController.m */,
+				97227F6418F9C62300103B25 /* LoginViewController.xib */,
 				534070DF18F995FB008AC9C6 /* SetUpViewController.h */,
 				534070E018F995FB008AC9C6 /* SetUpViewController.m */,
 				97D025E518F92DA100583527 /* AppDelegate.h */,

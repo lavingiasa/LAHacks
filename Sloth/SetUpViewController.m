@@ -205,13 +205,14 @@
 {
   //pull the data into a string
   //grab an int as well of the people
-  int maxIndex = 2;
+  
   NSString * stringToTest = @"Section1|09:00|12:00|51.509980|-0.133700|00000|Section2|12|13|25.000000|35.000000|00000";
   NSArray* tokenizedArray = [stringToTest componentsSeparatedByString: @"|"];
+  int maxIndex = [tokenizedArray count]/6;
   for (int i = 0; i < maxIndex; i++) {
     NSString * name = [tokenizedArray objectAtIndex:(i*5 + 0)];
     NSString * start = [tokenizedArray objectAtIndex:(i*5 + 1)];
-    NSString * end = [tokenizedArray objectAtIndex:(i*5 + 2)];
+    NSString * end = [tokenizedArray objectAtIndex:(i*5 + 2)]; 
     NSNumber * x = [tokenizedArray objectAtIndex:(i*5 + 3)];
     double xloc = [x doubleValue];
     NSNumber * y = [tokenizedArray objectAtIndex:(i*5 + 4)];

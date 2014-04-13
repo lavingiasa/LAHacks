@@ -7,9 +7,11 @@
 //
 
 #import "SetUpViewController.h"
-#import "SectionModel.h"
+#import "UserDetailsViewController.h"
+#import <Parse/Parse.h>
 
-@interface SetUpViewController ()  <UITextFieldDelegate, UIImagePickerControllerDelegate >
+
+@interface SetUpViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 @property (weak, nonatomic) IBOutlet UILabel *stepperLabel;
 @property (weak, nonatomic) IBOutlet UIButton *punishmentButton;
@@ -21,14 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UITextField *messageTF;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
-
-@property (weak, nonatomic) IBOutlet UIButton *takeSelfie;
-
-@property (weak, nonatomic) IBOutlet UIButton *chooseSelfie;
-
-@property (weak, nonatomic) IBOutlet UIButton *setScheduleButton;
-
-@property (weak, nonatomic) IBOutlet UITableView *schedleTable;
+@property (strong, nonatomic) PFObject* userInfo;
+@property (strong, nonatomic) NSString* punishmentSelected;
 
 @end
 
@@ -81,10 +77,11 @@
     [self.punishmentButton setTitle:[self.punishmentsArray objectAtIndex:row] forState:UIControlStateNormal];
     if ([[self.punishmentsArray objectAtIndex:row]  isEqual: @"Text Message"] ) {
         [self.textView setHidden:NO];
-    else if ([[self.punishmentsArray objectAtIndex:row]  isEqual: @"Embarrassing Picture"] ) {
-        [self.pictureView setHidden:NO];
-        NSLog(@"testing");
+        self.punishmentSelected = @"Text Message";
     }
+    
+    else
+        [self.textView setHidden:YES];
 }
 
 

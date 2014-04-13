@@ -18,15 +18,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *endTF;
 
 
-
 @property (weak, nonatomic) IBOutlet UITextField *daysTF;
 
 @end
 
+
 @implementation InputViewController
 
-UIButton *checkbox1, *checkbox2, *checkbox3, *checkbox4, *checkbox5, *checkbox6, *checkbox7;
-BOOL checkBoxSelected;
+bool checkBoxSelected;
+UIButton *checkbox1;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,33 +38,18 @@ BOOL checkBoxSelected;
     return self;
 }
 
-/*- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
-    checkbox1 = [[UIButton alloc] initWithFrame:CGRectMake(x,y,20,20);
-    checkbox2 = [[UIButton alloc] initWithFrame:CGRectMake(x,y,20,20);
-    checkbox3 = [[UIButton alloc] initWithFrame:CGRectMake(x,y,20,20);
-    checkbox4 = [[UIButton alloc] initWithFrame:CGRectMake(x,y,20,20);
-    checkbox4 = [[UIButton alloc] initWithFrame:CGRectMake(x,y,20,20);
-    checkbox4 = [[UIButton alloc] initWithFrame:CGRectMake(x,y,20,20);
-    checkbox4 = [[UIButton alloc] initWithFrame:CGRectMake(x,y,20,20);
 
-                 
-                // 20x20 is the size of the checckbox that you want
-                // create 2 images sizes 20x20 , one empty square and
-                // another of the same square with the checkmark in it
-                // Create 2 UIImages with these new images, then:
-                
-    [checkbox1 setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"] forState:UIControlStateNormal];
-    [checkbox1 setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"] forState:UIControlStateSelected];
-    [checkbox1 setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]forState:UIControlStateHighlighted];
+    checkbox1 = [[UIButton alloc] initWithFrame:CGRectMake(0,0,200,200)];
+    [checkbox1 setBackgroundImage:[UIImage imageNamed:@"Images/unchecked_box.png"] forState:UIControlStateNormal];
+    [checkbox1 setBackgroundImage:[UIImage imageNamed:@"Images/checked_box.png"] forState:UIControlStateSelected];
+    [checkbox1 setBackgroundImage:[UIImage imageNamed:@"Images/unchecked_box.png"]forState:UIControlStateHighlighted];
     checkbox1.adjustsImageWhenHighlighted=YES;
-    [checkbox1 addTarget checkBoxSelected];
-    [self.view addSubview:checkbox];
-                 
-                 
+    [checkbox1 addTarget:self action:@selector(checkboxSelected:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:checkbox1];
 }
+ 
 
 - (void)didReceiveMemoryWarning
 {
@@ -74,12 +59,12 @@ BOOL checkBoxSelected;
 
 -(void)checkboxSelected:(id)sender
 {
-    checkboxSelected = !checkboxSelected;
-    [checkbox setSelected:checkboxSelected];
+    checkBoxSelected = ! checkBoxSelected;
+    [checkbox1 setSelected: !checkBoxSelected];
 }
-                 
+
 - (IBAction)saveButtonPressed:(id)sender {
-}*/
+}
 
 
 @end

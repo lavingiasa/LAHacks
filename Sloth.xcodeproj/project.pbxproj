@@ -12,6 +12,8 @@
 		5370F34718F9D3D20037E849 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5370F34618F9D3D20037E849 /* Parse.framework */; };
 		5370F34A18F9EB6B0037E849 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370F34918F9EB6B0037E849 /* Schedule.m */; };
 		5370F35318FA04680037E849 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370F35218FA04680037E849 /* InputViewController.m */; };
+		5370F35518FA1BB40037E849 /* checked_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 5370F35418FA1BB40037E849 /* checked_box.png */; };
+		5370F35718FA1BC20037E849 /* unchecked_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 5370F35618FA1BC20037E849 /* unchecked_box.png */; };
 		97227F4F18F9C1BE00103B25 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */; };
 		97227F5118F9C28800103B25 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5018F9C28800103B25 /* CoreLocation.framework */; };
 		97227F5318F9C2BD00103B25 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5218F9C2BD00103B25 /* AudioToolbox.framework */; };
@@ -73,6 +75,8 @@
 		5370F34918F9EB6B0037E849 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
 		5370F35118FA04680037E849 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
 		5370F35218FA04680037E849 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
+		5370F35418FA1BB40037E849 /* checked_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked_box.png; sourceTree = "<group>"; };
+		5370F35618FA1BC20037E849 /* unchecked_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked_box.png; sourceTree = "<group>"; };
 		97227F4D18F9C1BE00103B25 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
 		97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
 		97227F5018F9C28800103B25 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -273,6 +277,8 @@
 		97D0260D18F9358C00583527 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5370F35618FA1BC20037E849 /* unchecked_box.png */,
+				5370F35418FA1BB40037E849 /* checked_box.png */,
 				97D0260E18F9371E00583527 /* gear.png */,
 			);
 			name = Images;
@@ -363,8 +369,10 @@
 				97227F6518F9C62300103B25 /* LoginViewController.xib in Resources */,
 				97227F7018F9C64E00103B25 /* Icon.png in Resources */,
 				97227F7218F9C64E00103B25 /* login-button-small-pressed@2x.png in Resources */,
+				5370F35718FA1BC20037E849 /* unchecked_box.png in Resources */,
 				97227F7418F9C64E00103B25 /* login-button-small@2x.png in Resources */,
 				97D0260F18F9371E00583527 /* gear.png in Resources */,
+				5370F35518FA1BB40037E849 /* checked_box.png in Resources */,
 				97227F7518F9C64E00103B25 /* Default-568h@2x.png in Resources */,
 				97D025EA18F92DA100583527 /* Main.storyboard in Resources */,
 				97227F7618F9C64E00103B25 /* Default.png in Resources */,

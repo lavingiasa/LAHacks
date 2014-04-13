@@ -22,7 +22,6 @@
         <!--Set Up View Controller-->
         <scene sceneID="Ftv-ZY-qdU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kuh-Yw-QwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="si8-ga-Qgl" customClass="SetUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bXd-jj-sse"/>
@@ -61,6 +60,7 @@
                         <outlet property="scheduleTable" destination="XcS-mj-plm" id="8mf-H8-d4m"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuh-Yw-QwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="604" y="-2145"/>
         </scene>
@@ -181,6 +181,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlM-0x-jGn">
+                                <rect key="frame" x="117" y="414" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Set Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NBn-bn-gJi" kind="modal" id="H6b-jN-4eE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -197,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrR-BN-p7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="-2375"/>
+            <point key="canvasLocation" x="1148" y="-2375"/>
         </scene>
         <!--Set Up View Controller-->
         <scene sceneID="KPK-gb-xjr">
@@ -481,9 +491,6 @@
                                 <state key="normal" title="Open Map">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="NBn-bn-gJi" kind="modal" id="42y-6I-9eg"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -619,7 +626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRB-er-MeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2208" y="-474"/>
+            <point key="canvasLocation" x="1708" y="-2375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="X5d-Ph-BwR">

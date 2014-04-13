@@ -10,6 +10,7 @@
 #import "UserDetailsViewController.h"
 #import "SectionModel.h"
 #import <Parse/Parse.h>
+#import "InputViewController.h"
 
 
 @interface SetUpViewController () <UITextFieldDelegate>
@@ -27,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
 @property (strong, nonatomic) PFObject* userInfo;
 @property (strong, nonatomic) NSString* punishmentSelected;
+@property (weak, nonatomic) IBOutlet UIButton *setScheduleButton;
+
 
 @end
 
@@ -45,6 +48,9 @@
 {
     [super viewDidLoad];
     self.punishmentsArray = @[@"Text Message", @"Embarrassing Picture", @"Money", @"Random Facebook Post"];
+    self.setScheduleButton.enabled = NO;
+    [self.scheduleTable reloadData];
+    
 }
 
 
@@ -105,9 +111,15 @@
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
+    
+    [self.messageTF resignFirstResponder];
+    [self.phoneTF resignFirstResponder];
+    self.setScheduleButton.enabled = YES;
+    
     if (self.completionHandler) {
         self.completionHandler(self.messageTF.text);
     }
+    
     
     if ([self.punishmentSelected isEqual: @"Text Message"] ) {
         NSLog(@"%@",[UserDetailsViewController getName]);
@@ -117,6 +129,7 @@
         self.userInfo[@"punishmentReceiver"] = self.phoneTF.text;
         self.userInfo[@"punishmnetObject"] = self.messageTF.text;
         [self.userInfo saveInBackground];
+        
     }
 }
 
@@ -186,6 +199,7 @@
     cell.textLabel.text = [[[SectionModel getSections ] objectAtIndex:[indexPath row]] sectionName];
     return cell;
 }
+
 
 
 /*- (IBAction)takeSelfieTouched:(id)sender {

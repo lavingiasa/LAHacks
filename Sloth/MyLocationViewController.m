@@ -114,4 +114,8 @@ MKPointAnnotation *dropPin;
     // Dispose of any resources that can be recreated.
 }
 
++ (CLLocationCoordinate2D)coordinateOfAnnotation {
+    return (coordinateOfAnnotation);
+}
+
 @end

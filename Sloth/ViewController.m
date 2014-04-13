@@ -37,6 +37,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)print:(id)sender
+{
+  [SectionModel getFormattedString];
+}
 
 - (IBAction)checkIn:(id)sender
 {

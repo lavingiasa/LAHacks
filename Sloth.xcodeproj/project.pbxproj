@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A3C6DB418FA052D00233CC0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3C6DB318FA052D00233CC0 /* Parse.framework */; };
 		2A3C6DB518FA052D00233CC0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3C6DB318FA052D00233CC0 /* Parse.framework */; };
 		534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E018F995FB008AC9C6 /* SetUpViewController.m */; };
 		534070E418F9964D008AC9C6 /* Punishment.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E318F9964D008AC9C6 /* Punishment.m */; };
 		5370F34718F9D3D20037E849 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5370F34618F9D3D20037E849 /* Parse.framework */; };
 		5370F34A18F9EB6B0037E849 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370F34918F9EB6B0037E849 /* Schedule.m */; };
 		5370F35318FA04680037E849 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370F35218FA04680037E849 /* InputViewController.m */; };
+		97089D6A18FA56360084D7CA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97089D6918FA56360084D7CA /* SettingsViewController.m */; };
 		97227F4F18F9C1BE00103B25 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */; };
 		97227F5118F9C28800103B25 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5018F9C28800103B25 /* CoreLocation.framework */; };
 		97227F5318F9C2BD00103B25 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5218F9C2BD00103B25 /* AudioToolbox.framework */; };
@@ -79,6 +79,8 @@
 		5370F34918F9EB6B0037E849 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
 		5370F35118FA04680037E849 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
 		5370F35218FA04680037E849 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
+		97089D6818FA56360084D7CA /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		97089D6918FA56360084D7CA /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		97227F4D18F9C1BE00103B25 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
 		97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
 		97227F5018F9C28800103B25 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -212,12 +214,11 @@
 		97D025DC18F92DA100583527 /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
-				97D025E818F92DA100583527 /* Main.storyboard */,
 				534070E218F9964D008AC9C6 /* Punishment.h */,
 				534070E318F9964D008AC9C6 /* Punishment.m */,
 				9736EE3D18F9BFA100B6EDDF /* LoginViewController.h */,
-				97227F6418F9C62300103B25 /* LoginViewController.xib */,
 				9736EE3E18F9BFA100B6EDDF /* LoginViewController.m */,
+				97227F6418F9C62300103B25 /* LoginViewController.xib */,
 				534070DF18F995FB008AC9C6 /* SetUpViewController.h */,
 				534070E018F995FB008AC9C6 /* SetUpViewController.m */,
 				97D025E518F92DA100583527 /* AppDelegate.h */,
@@ -242,6 +243,8 @@
 				97D025DD18F92DA100583527 /* Supporting Files */,
 				97D0260D18F9358C00583527 /* Images */,
 				97D025EE18F92DA100583527 /* Images.xcassets */,
+				97089D6818FA56360084D7CA /* SettingsViewController.h */,
+				97089D6918FA56360084D7CA /* SettingsViewController.m */,
 			);
 			path = Sloth;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */,
 				97227F4F18F9C1BE00103B25 /* UserDetailsViewController.m in Sources */,
 				975150A018F940ED007C5EA4 /* SectionModel.m in Sources */,
+				97089D6A18FA56360084D7CA /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

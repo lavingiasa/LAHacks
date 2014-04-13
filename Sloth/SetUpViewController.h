@@ -11,7 +11,7 @@
 
 typedef void(^InputCompletionHander)(NSString *inputText);
 
-@interface SetUpViewController : UIViewController <PunishmentTableViewControllerDelegate>
+@interface SetUpViewController : UIViewController <PunishmentTableViewControllerDelegate, UIImagePickerControllerDelegate>
 @property (copy, nonatomic) InputCompletionHander completionHandler;
 
 @end

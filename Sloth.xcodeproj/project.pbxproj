@@ -10,6 +10,8 @@
 		534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E018F995FB008AC9C6 /* SetUpViewController.m */; };
 		534070E418F9964D008AC9C6 /* Punishment.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E318F9964D008AC9C6 /* Punishment.m */; };
 		5370F34718F9D3D20037E849 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5370F34618F9D3D20037E849 /* Parse.framework */; };
+		5370F34A18F9EB6B0037E849 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370F34918F9EB6B0037E849 /* Schedule.m */; };
+		5370F35318FA04680037E849 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370F35218FA04680037E849 /* InputViewController.m */; };
 		97227F4F18F9C1BE00103B25 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */; };
 		97227F5118F9C28800103B25 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5018F9C28800103B25 /* CoreLocation.framework */; };
 		97227F5318F9C2BD00103B25 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5218F9C2BD00103B25 /* AudioToolbox.framework */; };
@@ -67,6 +69,10 @@
 		534070E218F9964D008AC9C6 /* Punishment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Punishment.h; sourceTree = "<group>"; };
 		534070E318F9964D008AC9C6 /* Punishment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Punishment.m; sourceTree = "<group>"; };
 		5370F34618F9D3D20037E849 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		5370F34818F9EB6B0037E849 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		5370F34918F9EB6B0037E849 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		5370F35118FA04680037E849 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
+		5370F35218FA04680037E849 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
 		97227F4D18F9C1BE00103B25 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
 		97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
 		97227F5018F9C28800103B25 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -208,6 +214,10 @@
 				97227F4D18F9C1BE00103B25 /* UserDetailsViewController.h */,
 				97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */,
 				97D025E818F92DA100583527 /* Main.storyboard */,
+				5370F35118FA04680037E849 /* InputViewController.h */,
+				5370F35218FA04680037E849 /* InputViewController.m */,
+				5370F34818F9EB6B0037E849 /* Schedule.h */,
+				5370F34918F9EB6B0037E849 /* Schedule.m */,
 				97D025EB18F92DA100583527 /* ViewController.h */,
 				97D025EC18F92DA100583527 /* ViewController.m */,
 				97D025EE18F92DA100583527 /* Images.xcassets */,
@@ -316,7 +326,7 @@
 				ORGANIZATIONNAME = SKAD;
 				TargetAttributes = {
 					97D025D218F92DA100583527 = {
-						DevelopmentTeam = 6PP5HKJ3Z8;
+						DevelopmentTeam = 7FX28RKSGV;
 					};
 					97D025F318F92DA100583527 = {
 						TestTargetID = 97D025D218F92DA100583527;
@@ -379,12 +389,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5370F34A18F9EB6B0037E849 /* Schedule.m in Sources */,
 				97D025ED18F92DA100583527 /* ViewController.m in Sources */,
 				97D025E718F92DA100583527 /* AppDelegate.m in Sources */,
 				534070E418F9964D008AC9C6 /* Punishment.m in Sources */,
 				975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */,
 				9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */,
 				9736EE3F18F9BFA100B6EDDF /* LoginViewController.m in Sources */,
+				5370F35318FA04680037E849 /* InputViewController.m in Sources */,
 				97D025E318F92DA100583527 /* main.m in Sources */,
 				534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */,
 				97227F4F18F9C1BE00103B25 /* UserDetailsViewController.m in Sources */,
@@ -525,6 +537,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sloth/Sloth-Prefix.pch";
 				INFOPLIST_FILE = "Sloth/Sloth-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -546,6 +559,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sloth/Sloth-Prefix.pch";
 				INFOPLIST_FILE = "Sloth/Sloth-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

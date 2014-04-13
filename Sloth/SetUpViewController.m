@@ -7,18 +7,28 @@
 //
 
 #import "SetUpViewController.h"
+#import "SectionModel.h"
 
-@interface SetUpViewController () <UITextFieldDelegate>
+@interface SetUpViewController ()  <UITextFieldDelegate, UIImagePickerControllerDelegate >
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 @property (weak, nonatomic) IBOutlet UILabel *stepperLabel;
 @property (weak, nonatomic) IBOutlet UIButton *punishmentButton;
 
 @property (strong, nonatomic) NSArray *punishmentsArray;
 @property (weak, nonatomic) IBOutlet UIView *textView;
+@property (weak, nonatomic) IBOutlet UIView *pictureView;
 
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UITextField *messageTF;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
+
+@property (weak, nonatomic) IBOutlet UIButton *takeSelfie;
+
+@property (weak, nonatomic) IBOutlet UIButton *chooseSelfie;
+
+@property (weak, nonatomic) IBOutlet UIButton *setScheduleButton;
+
+@property (weak, nonatomic) IBOutlet UITableView *schedleTable;
 
 @end
 
@@ -71,8 +81,10 @@
     [self.punishmentButton setTitle:[self.punishmentsArray objectAtIndex:row] forState:UIControlStateNormal];
     if ([[self.punishmentsArray objectAtIndex:row]  isEqual: @"Text Message"] )
         [self.textView setHidden:NO];
-    else
-        [self.textView setHidden:YES];
+    else if ([[self.punishmentsArray objectAtIndex:row]  isEqual: @"Embarrassing Picture"] ) {
+        [self.pictureView setHidden:NO];
+        NSLog(@"testing");
+    }
 }
 
 
@@ -132,5 +144,81 @@
 }
 
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[SectionModel getSections] count];
+}
+
+
+/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScheduleCell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = [[[SectionModel getSections ] objectAtIndex:[indexPath row]] sectionName];
+    
+    return cell;
+}*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"ScheduleCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [[[SectionModel getSections ] objectAtIndex:[indexPath row]] sectionName];
+    return cell;
+}
+
+
+/*- (IBAction)takeSelfieTouched:(id)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = (id)self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
+}
+
+
+- (IBAction)chooseSelfieTouched:(id)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = (id)self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    //UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    //self.imageView.image = chosenImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}*/
+
+- (IBAction)scheduleButtonPressed:(id)sender {
+    
+}
 
 @end

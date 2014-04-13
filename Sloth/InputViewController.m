@@ -17,6 +17,16 @@
 @property (weak, nonatomic) IBOutlet UITextField *startTF;
 @property (weak, nonatomic) IBOutlet UITextField *endTF;
 
+@property (strong, nonatomic) IBOutlet UIButton *mondayButton;
+
+@property (strong, nonatomic) IBOutlet UIButton *tuesdayButton;
+
+@property (strong, nonatomic) IBOutlet UIButton *wednesdayButton;
+
+@property (strong, nonatomic) IBOutlet UIButton *thursdayButton;
+
+@property (strong, nonatomic) IBOutlet UIButton *fridayButton;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *daysTF;
 
@@ -25,8 +35,18 @@
 
 @implementation InputViewController
 
-bool checkBoxSelected;
+bool mondayBoxSelected = NO;
+bool tuesdayBoxSelected = NO;
+bool wednesdayBoxSelected = NO;
+bool thursdayBoxSelected = NO;
+bool fridayBoxSelected = NO;
+
 UIButton *checkbox1;
+@synthesize mondayButton;
+@synthesize tuesdayButton;
+@synthesize wednesdayButton;
+@synthesize thursdayButton;
+@synthesize fridayButton;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,16 +60,68 @@ UIButton *checkbox1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    checkbox1 = [[UIButton alloc] initWithFrame:CGRectMake(0,0,200,200)];
-    [checkbox1 setBackgroundImage:[UIImage imageNamed:@"Images/unchecked_box.png"] forState:UIControlStateNormal];
-    [checkbox1 setBackgroundImage:[UIImage imageNamed:@"Images/checked_box.png"] forState:UIControlStateSelected];
-    [checkbox1 setBackgroundImage:[UIImage imageNamed:@"Images/unchecked_box.png"]forState:UIControlStateHighlighted];
-    checkbox1.adjustsImageWhenHighlighted=YES;
-    [checkbox1 addTarget:self action:@selector(checkboxSelected:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:checkbox1];
+  
 }
- 
+
+- (IBAction)MondayButton:(id)sender
+{
+  if(mondayBoxSelected == YES)
+  {
+    [mondayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
+    mondayBoxSelected = NO;
+  }else{
+    [mondayButton setImage:[UIImage imageNamed:@"checked_box.png"] forState:UIControlStateNormal];
+    mondayBoxSelected = YES;
+  }
+
+}
+
+- (IBAction)TuesdayButton:(id)sender
+{
+  if(tuesdayBoxSelected == YES)
+  {
+    [tuesdayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
+    tuesdayBoxSelected = NO;
+  }else{
+    [tuesdayButton setImage:[UIImage imageNamed:@"checked_box.png"] forState:UIControlStateNormal];
+    tuesdayBoxSelected = YES;
+  }
+}
+- (IBAction)WednesdayButton:(id)sender
+{
+  if(wednesdayBoxSelected == YES)
+  {
+    [wednesdayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
+    wednesdayBoxSelected = NO;
+  }else{
+    [wednesdayButton setImage:[UIImage imageNamed:@"checked_box.png"] forState:UIControlStateNormal];
+    wednesdayBoxSelected = YES;
+  }
+}
+- (IBAction)ThursdayButton:(id)sender
+{
+  if(thursdayBoxSelected == YES)
+  {
+    [thursdayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
+    thursdayBoxSelected = NO;
+  }else{
+    [thursdayButton setImage:[UIImage imageNamed:@"checked_box.png"] forState:UIControlStateNormal];
+    thursdayBoxSelected = YES;
+  }
+  
+}
+- (IBAction)FridayButton:(id)sender
+{
+  if(fridayBoxSelected == YES)
+  {
+    [fridayButton setImage:[UIImage imageNamed:@"unchecked_box.png"] forState:UIControlStateNormal];
+    fridayBoxSelected = NO;
+  }else{
+    [fridayButton setImage:[UIImage imageNamed:@"checked_box.png"] forState:UIControlStateNormal];
+    fridayBoxSelected = YES;
+  }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -57,11 +129,6 @@ UIButton *checkbox1;
     // Dispose of any resources that can be recreated.
 }
 
--(void)checkboxSelected:(id)sender
-{
-    checkBoxSelected = ! checkBoxSelected;
-    [checkbox1 setSelected: !checkBoxSelected];
-}
 
 - (IBAction)saveButtonPressed:(id)sender {
 }

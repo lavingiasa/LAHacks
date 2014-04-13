@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j2U-Bg-JZc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j2U-Bg-JZc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -137,20 +137,80 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAC-Fn-ETC">
+                                <rect key="frame" x="33" y="298" width="86" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Monday" image="unchecked_box.png">
+                                    <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MondayButton:" destination="E8f-nr-cDp" eventType="touchUpInside" id="jIM-Cv-gfj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEL-dg-0oh">
+                                <rect key="frame" x="127" y="298" width="98" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tuesday" image="unchecked_box.png">
+                                    <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="TuesdayButton:" destination="E8f-nr-cDp" eventType="touchUpInside" id="IHH-Qj-3XS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCw-aN-5t3">
+                                <rect key="frame" x="99" y="405" width="98" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Friday" image="unchecked_box.png">
+                                    <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="FridayButton:" destination="E8f-nr-cDp" eventType="touchUpInside" id="UQh-Oe-9b3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUl-Se-ftf">
+                                <rect key="frame" x="27" y="328" width="122" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Wednesday" image="unchecked_box.png">
+                                    <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="WednesdayButton:" destination="E8f-nr-cDp" eventType="touchUpInside" id="fck-dx-ly8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8x-Ar-1qb">
+                                <rect key="frame" x="157" y="328" width="98" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Thursday" image="unchecked_box.png">
+                                    <color key="titleColor" red="5.2602019000000001e-05" green="0.69021739130000004" blue="0.033470874849999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ThursdayButton:" destination="E8f-nr-cDp" eventType="touchUpInside" id="SET-u7-ZLd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="7lw-1r-9tb" id="cJO-iE-3Xw"/>
                         <outlet property="endTF" destination="Knp-uw-jUY" id="t9p-0R-LWt"/>
+                        <outlet property="fridayButton" destination="mCw-aN-5t3" id="Qgs-R5-YcR"/>
+                        <outlet property="mondayButton" destination="UAC-Fn-ETC" id="hWJ-w1-0NS"/>
                         <outlet property="nameTF" destination="xEz-NC-Rtx" id="F40-Pw-Cnd"/>
                         <outlet property="saveButton" destination="py1-0v-afF" id="7JW-A3-JqX"/>
                         <outlet property="startTF" destination="qC9-UQ-0Xk" id="l4W-dK-VAU"/>
+                        <outlet property="thursdayButton" destination="n8x-Ar-1qb" id="8au-Vr-ayZ"/>
+                        <outlet property="tuesdayButton" destination="TEL-dg-0oh" id="Irv-f7-A7h"/>
+                        <outlet property="wednesdayButton" destination="bUl-Se-ftf" id="UWx-sr-0kY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrR-BN-p7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-2145"/>
+            <point key="canvasLocation" x="1135" y="-2375"/>
         </scene>
         <!--Set Up View Controller-->
         <scene sceneID="KPK-gb-xjr">
@@ -650,6 +710,7 @@
     </scenes>
     <resources>
         <image name="gear.png" width="20" height="20"/>
+        <image name="unchecked_box.png" width="20" height="20"/>
     </resources>
     <color key="tintColor" red="5.2602018999521793e-05" green="0.69021739130434789" blue="0.033470874848444333" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

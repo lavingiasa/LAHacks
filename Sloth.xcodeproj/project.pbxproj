@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3C6DB418FA052D00233CC0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3C6DB318FA052D00233CC0 /* Parse.framework */; };
+		2A3C6DB518FA052D00233CC0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3C6DB318FA052D00233CC0 /* Parse.framework */; };
 		534070E118F995FB008AC9C6 /* SetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E018F995FB008AC9C6 /* SetUpViewController.m */; };
 		534070E418F9964D008AC9C6 /* Punishment.m in Sources */ = {isa = PBXBuildFile; fileRef = 534070E318F9964D008AC9C6 /* Punishment.m */; };
 		97227F4F18F9C1BE00103B25 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */; };
@@ -16,7 +18,6 @@
 		97227F5718F9C2DD00103B25 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5618F9C2DD00103B25 /* libz.dylib */; };
 		97227F5918F9C2E500103B25 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5818F9C2E500103B25 /* MobileCoreServices.framework */; };
 		97227F5B18F9C2EE00103B25 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5A18F9C2EE00103B25 /* Security.framework */; };
-		97227F5D18F9C2F600103B25 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5C18F9C2F600103B25 /* StoreKit.framework */; };
 		97227F5F18F9C30E00103B25 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227F5E18F9C30E00103B25 /* SystemConfiguration.framework */; };
 		97227F6518F9C62300103B25 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97227F6418F9C62300103B25 /* LoginViewController.xib */; };
 		97227F6F18F9C64E00103B25 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97227F6618F9C64E00103B25 /* Icon@2x.png */; };
@@ -32,7 +33,6 @@
 		97227F7C18F9E4BE00103B25 /* MyLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97227F7B18F9E4BE00103B25 /* MyLocationViewController.m */; };
 		9736EE3818F9678A00B6EDDF /* SectionInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */; };
 		9736EE3B18F9BF3500B6EDDF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736EE3918F9BF3500B6EDDF /* FacebookSDK.framework */; };
-		9736EE3C18F9BF3500B6EDDF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736EE3A18F9BF3500B6EDDF /* Parse.framework */; };
 		9736EE3F18F9BFA100B6EDDF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736EE3E18F9BFA100B6EDDF /* LoginViewController.m */; };
 		975150A018F940ED007C5EA4 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751509F18F940ED007C5EA4 /* SectionModel.m */; };
 		975150A318F95B7A007C5EA4 /* SectionsTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 975150A218F95B7A007C5EA4 /* SectionsTable.m */; };
@@ -64,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A3C6DB318FA052D00233CC0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		534070DF18F995FB008AC9C6 /* SetUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUpViewController.h; sourceTree = "<group>"; };
 		534070E018F995FB008AC9C6 /* SetUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUpViewController.m; sourceTree = "<group>"; };
 		534070E218F9964D008AC9C6 /* Punishment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Punishment.h; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		97227F5618F9C2DD00103B25 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		97227F5818F9C2E500103B25 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		97227F5A18F9C2EE00103B25 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		97227F5C18F9C2F600103B25 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		97227F5E18F9C30E00103B25 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		97227F6418F9C62300103B25 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		97227F6618F9C64E00103B25 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -94,7 +94,6 @@
 		9736EE3618F9678A00B6EDDF /* SectionInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionInformationViewController.h; sourceTree = "<group>"; };
 		9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionInformationViewController.m; sourceTree = "<group>"; };
 		9736EE3918F9BF3500B6EDDF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		9736EE3A18F9BF3500B6EDDF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9736EE3D18F9BFA100B6EDDF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9736EE3E18F9BFA100B6EDDF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9751509E18F940ED007C5EA4 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
@@ -131,17 +130,16 @@
 				97227F7918F9E46800103B25 /* MapKit.framework in Frameworks */,
 				97D025DB18F92DA100583527 /* UIKit.framework in Frameworks */,
 				97227F5F18F9C30E00103B25 /* SystemConfiguration.framework in Frameworks */,
-				97227F5D18F9C2F600103B25 /* StoreKit.framework in Frameworks */,
 				97227F5B18F9C2EE00103B25 /* Security.framework in Frameworks */,
 				97227F5918F9C2E500103B25 /* MobileCoreServices.framework in Frameworks */,
 				97227F5718F9C2DD00103B25 /* libz.dylib in Frameworks */,
+				2A3C6DB418FA052D00233CC0 /* Parse.framework in Frameworks */,
 				97227F5518F9C2D000103B25 /* CFNetwork.framework in Frameworks */,
 				97227F5318F9C2BD00103B25 /* AudioToolbox.framework in Frameworks */,
 				97227F5118F9C28800103B25 /* CoreLocation.framework in Frameworks */,
 				97D025D918F92DA100583527 /* CoreGraphics.framework in Frameworks */,
 				9736EE3B18F9BF3500B6EDDF /* FacebookSDK.framework in Frameworks */,
 				97D025D718F92DA100583527 /* Foundation.framework in Frameworks */,
-				9736EE3C18F9BF3500B6EDDF /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +149,7 @@
 			files = (
 				97D025F618F92DA100583527 /* XCTest.framework in Frameworks */,
 				97D025F818F92DA100583527 /* UIKit.framework in Frameworks */,
+				2A3C6DB518FA052D00233CC0 /* Parse.framework in Frameworks */,
 				97D025F718F92DA100583527 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,15 +181,14 @@
 			children = (
 				97227F7818F9E46800103B25 /* MapKit.framework */,
 				97227F5E18F9C30E00103B25 /* SystemConfiguration.framework */,
-				97227F5C18F9C2F600103B25 /* StoreKit.framework */,
 				97227F5A18F9C2EE00103B25 /* Security.framework */,
 				97227F5818F9C2E500103B25 /* MobileCoreServices.framework */,
 				97227F5618F9C2DD00103B25 /* libz.dylib */,
+				2A3C6DB318FA052D00233CC0 /* Parse.framework */,
 				97227F5418F9C2D000103B25 /* CFNetwork.framework */,
 				97227F5218F9C2BD00103B25 /* AudioToolbox.framework */,
 				97227F5018F9C28800103B25 /* CoreLocation.framework */,
 				9736EE3918F9BF3500B6EDDF /* FacebookSDK.framework */,
-				9736EE3A18F9BF3500B6EDDF /* Parse.framework */,
 				97D025D618F92DA100583527 /* Foundation.framework */,
 				97D025D818F92DA100583527 /* CoreGraphics.framework */,
 				97D025DA18F92DA100583527 /* UIKit.framework */,
@@ -202,6 +200,7 @@
 		97D025DC18F92DA100583527 /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
+				97D025E818F92DA100583527 /* Main.storyboard */,
 				534070E218F9964D008AC9C6 /* Punishment.h */,
 				534070E318F9964D008AC9C6 /* Punishment.m */,
 				9736EE3D18F9BFA100B6EDDF /* LoginViewController.h */,
@@ -209,16 +208,12 @@
 				9736EE3E18F9BFA100B6EDDF /* LoginViewController.m */,
 				534070DF18F995FB008AC9C6 /* SetUpViewController.h */,
 				534070E018F995FB008AC9C6 /* SetUpViewController.m */,
-				97D0260D18F9358C00583527 /* Images */,
 				97D025E518F92DA100583527 /* AppDelegate.h */,
 				97D025E618F92DA100583527 /* AppDelegate.m */,
 				97227F4D18F9C1BE00103B25 /* UserDetailsViewController.h */,
-				97D025E818F92DA100583527 /* Main.storyboard */,
 				97227F4E18F9C1BE00103B25 /* UserDetailsViewController.m */,
 				97D025EB18F92DA100583527 /* ViewController.h */,
 				97D025EC18F92DA100583527 /* ViewController.m */,
-				97D025EE18F92DA100583527 /* Images.xcassets */,
-				97D025DD18F92DA100583527 /* Supporting Files */,
 				9751509E18F940ED007C5EA4 /* SectionModel.h */,
 				9751509F18F940ED007C5EA4 /* SectionModel.m */,
 				975150A118F95B7A007C5EA4 /* SectionsTable.h */,
@@ -227,6 +222,9 @@
 				9736EE3718F9678A00B6EDDF /* SectionInformationViewController.m */,
 				97227F7A18F9E4BE00103B25 /* MyLocationViewController.h */,
 				97227F7B18F9E4BE00103B25 /* MyLocationViewController.m */,
+				97D025DD18F92DA100583527 /* Supporting Files */,
+				97D0260D18F9358C00583527 /* Images */,
+				97D025EE18F92DA100583527 /* Images.xcassets */,
 			);
 			path = Sloth;
 			sourceTree = "<group>";
@@ -321,11 +319,16 @@
 		97D025CB18F92DA100583527 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = SKAD;
 				TargetAttributes = {
 					97D025D218F92DA100583527 = {
 						DevelopmentTeam = 6PP5HKJ3Z8;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					97D025F318F92DA100583527 = {
 						TestTargetID = 97D025D218F92DA100583527;
@@ -452,7 +455,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -491,7 +493,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -530,6 +531,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/lavingiasa/Dropbox/USC/Hackathons/LAHacks2014/iOS/Sloth,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sloth/Sloth-Prefix.pch";
@@ -550,6 +552,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/lavingiasa/Dropbox/USC/Hackathons/LAHacks2014/iOS/Sloth,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sloth/Sloth-Prefix.pch";
@@ -563,12 +566,12 @@
 		97D0260918F92DA100583527 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sloth.app/Sloth";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sloth/Sloth-Prefix.pch";
@@ -586,12 +589,12 @@
 		97D0260A18F92DA100583527 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sloth.app/Sloth";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sloth/Sloth-Prefix.pch";

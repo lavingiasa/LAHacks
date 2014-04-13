@@ -15,7 +15,10 @@
 @property (nonatomic, strong) NSMutableArray *rowDataArray;
 @property (nonatomic, strong) NSMutableData *imageData;
 
+
 // UINavigationBar button touch handler
 - (void)logoutButtonTouchHandler:(id)sender;
+
+
 
 @end

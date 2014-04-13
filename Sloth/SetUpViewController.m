@@ -7,6 +7,9 @@
 //
 
 #import "SetUpViewController.h"
+#import "UserDetailsViewController.h"
+#import <Parse/Parse.h>
+
 
 @interface SetUpViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
@@ -19,7 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UITextField *messageTF;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
-
+@property (strong, nonatomic) PFObject* userInfo;
+@property (strong, nonatomic) NSString* punishmentSelected;
 @end
 
 @implementation SetUpViewController
@@ -67,10 +71,13 @@
 
 - (void)itemSelectedatRow:(NSInteger)row
 {
-    NSLog(@"row %lu selected", (unsigned long)row);
+//    NSLog(@"row %lu selected", (unsigned long)row);
     [self.punishmentButton setTitle:[self.punishmentsArray objectAtIndex:row] forState:UIControlStateNormal];
-    if ([[self.punishmentsArray objectAtIndex:row]  isEqual: @"Text Message"] )
+    if ([[self.punishmentsArray objectAtIndex:row]  isEqual: @"Text Message"] ) {
         [self.textView setHidden:NO];
+        self.punishmentSelected = @"Text Message";
+    }
+    
     else
         [self.textView setHidden:YES];
 }
@@ -96,6 +103,16 @@
 - (IBAction)saveButtonTapped:(id)sender {
     if (self.completionHandler) {
         self.completionHandler(self.messageTF.text);
+    }
+    
+    if ([self.punishmentSelected isEqual: @"Text Message"] ) {
+        NSLog(@"%@",[UserDetailsViewController getUserName]);
+        self.userInfo = [PFObject objectWithClassName:@"UserInfo"];
+//        self.userInfo[@"Name"] = [UserDetailsViewController getUserName];
+        self.userInfo[@"Punishment"] = @"Text Message";
+        self.userInfo[@"punishmentReceiver"] = self.phoneTF.text;
+        self.userInfo[@"punishmnetObject"] = self.messageTF.text;
+        [self.userInfo saveInBackground];
     }
 }
 

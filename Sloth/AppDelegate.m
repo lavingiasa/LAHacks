@@ -64,7 +64,7 @@
   // ****************************************************************************
   // Fill in with your Parse credentials:
   // ****************************************************************************
-  [Parse setApplicationId:@"pPMMcEX5L6ZaJKAA10f7UqHPvBzXawin9NyyGGZj" clientKey:@"Z6iA9thUIYpun5yJcFBS71ragMI1gcY0bW9wPF5z"];
+  [Parse setApplicationId:@"TSmN8m89HYGPOYghsOKLknjwzC9vJXYJ4xarqFiQ" clientKey:@"9swrS2Io755YB75GqlSpdDjgm84FoeB0ueR2zEWE"];
   
   // ****************************************************************************
   // Your Facebook application id is configured in Info.plist.

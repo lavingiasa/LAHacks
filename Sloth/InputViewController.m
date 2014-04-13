@@ -9,6 +9,7 @@
 #import "InputViewController.h"
 #import "MyLocationViewController.h"
 #import "SectionModel.h"
+#import "SetUpViewController.h"
 
 @interface InputViewController () <UITextFieldDelegate>
 
@@ -209,10 +210,12 @@ UIButton *checkbox1;
         NSMutableArray * sections = [SectionModel getSections];
         NSLog(@"%d", sections.count);
         
-        
-        
-        
-        
+        //do the transition here
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        SetUpViewController *viewController = (SetUpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ListOfClass"];
+        [self presentViewController:viewController animated:YES completion:nil];
+      
+      
     }
     else {
         

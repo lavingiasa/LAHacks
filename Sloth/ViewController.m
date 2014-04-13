@@ -125,6 +125,7 @@
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
       [alert show];
+      //INCREASE THE COUNT ON THE SERVER
       return;
     }else{
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wrong Location"

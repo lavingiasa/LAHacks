@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j2U-Bg-JZc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j2U-Bg-JZc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -22,7 +22,7 @@
         <!--Set Up View Controller-->
         <scene sceneID="Ftv-ZY-qdU">
             <objects>
-                <viewController id="si8-ga-Qgl" customClass="SetUpViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListOfClass" id="si8-ga-Qgl" customClass="SetUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bXd-jj-sse"/>
                         <viewControllerLayoutGuide type="bottom" id="4wg-4p-hzL"/>
@@ -195,7 +195,6 @@
                                 </state>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="E8f-nr-cDp" eventType="touchUpInside" id="fmS-3y-kA2"/>
-                                    <segue destination="si8-ga-Qgl" kind="push" id="XCt-Oj-YZf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlM-0x-jGn">
@@ -734,7 +733,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="XCt-Oj-YZf"/>
         <segue reference="f1J-bx-oyw"/>
     </inferredMetricsTieBreakers>
 </document>

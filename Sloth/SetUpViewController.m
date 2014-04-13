@@ -145,7 +145,6 @@
 
 - (IBAction)textFieldDidEndEditing:(UITextField *)sender {
     [self animateTextField: sender up: NO];
-    
 }
 
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up {
